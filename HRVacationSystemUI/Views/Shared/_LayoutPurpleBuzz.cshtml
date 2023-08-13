@@ -1,0 +1,105 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <title>HRVacation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="~/Content/purplebuzz/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/purplebuzz/assets/img/favicon.ico">
+    <link href="~/Content/purplebuzz/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/purplebuzz/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/purplebuzz/assets/css/templatemo.css">
+    <link rel="stylesheet" href="~/Content/purplebuzz/assets/css/custom.css">
+
+    @*https://templatemo.com/tm-561-purple-buzz*@
+
+
+    @RenderSection("hrvacationstyle", required: false)
+</head>
+
+<body>
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="~/Content/purplebuzz/index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">HR</span> <span class="text-primary h4">Vacation</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">İletişim</a>
+                        </li>
+                        <li>@Html.ActionLink("Çıkış Yap", "SignOut", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">Hoşgeldiniz</h1>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="container py-5">
+
+        <div class="row ">
+           @RenderBody()
+
+        </div>
+    </section>
+    <footer class="bg-secondary pt-4">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-start text-center text-light light-300">
+                                Tüm hakları saklıdır.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-end text-center text-light light-300">
+                                Designed by <a rel="sponsored" class="text-decoration-none text-light" href="https://templatemo.com/" target="_blank"><strong>HRVacation</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Bootstrap -->
+    <script src="~/Content/purplebuzz/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Templatemo -->
+    <script src="~/Content/purplebuzz/assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="~/Content/purplebuzz/assets/js/custom.js"></script>
+
+</body>
+
+</html>
